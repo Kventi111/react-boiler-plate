@@ -1,7 +1,12 @@
+const prettierConfig = fs.readFileSync('./.prettierrc', 'utf8');
+const prettierOptions = JSON.parse(prettierConfig);
+
 module.exports = {
   extends: [
     require.resolve('./config/eslint/eslint.js'),
     require.resolve('./config/eslint/eslint-react.js'),
+    'prettier',
+    'prettier/react'
   ],
   root: true,
   env: {
@@ -9,6 +14,7 @@ module.exports = {
     node: true,
     jasmine: true
   },
+  plugins: ['json', 'prettier', 'react-hooks'],
   rules: {
     "comma-dangle": ["error", "only-multiline"],
     "indent": ["error", 2, {
@@ -80,6 +86,7 @@ module.exports = {
           'no-console': [0],
           '@typescript-eslint/prefer-readonly': [0],
         },
+        plugins: ['@typescript-eslint', 'prettier'],
         parserOptions: {
           project: './tsconfig.json',
           tsconfigRootDir: __dirname,
