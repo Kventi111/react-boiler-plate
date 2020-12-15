@@ -26,15 +26,10 @@ module.exports = function (env, argv) {
       path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
       historyApiFallback: true,
       hot: true,
       compress: true,
-      port: 9000
-    },
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
+      contentBase: path.join(__dirname, 'dist'),
     },
     stats: 'normal',
     devtool: !isProduction ? 'eval-source-map' : undefined,
@@ -70,7 +65,7 @@ module.exports = function (env, argv) {
         },
       }),
       new webpack.DefinePlugin({
-        BROWSER : JSON.stringify(true),
+        BROWSER: JSON.stringify(true),
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         'process.env.SC_ATTR': JSON.stringify('data-styled-rbo-lite-layout'),
         BROWSER_SUPPORTS_HTML5: true
@@ -141,7 +136,7 @@ module.exports = function (env, argv) {
             },
             {
               loader: 'ts-loader',
-              options: { 
+              options: {
                 happyPackMode: true,
                 transpileOnly: true
               }
@@ -206,11 +201,11 @@ module.exports = function (env, argv) {
         // },
         {
           test: /\.(png|ico|jpe?g|jpeg|gif|svg)$/i,
-          use : [
+          use: [
             {
               loader: 'file-loader',
-              query : {
-                limit  : 10,
+              query: {
+                limit: 10,
                 context: relAssetsPath,
                 name: isProduction ? '[path][name].[hash:8].[ext]' : '[path][name][local].[ext]'
               }
