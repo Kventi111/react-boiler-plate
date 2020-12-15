@@ -1,0 +1,37 @@
+{
+  "name": "@fcc/config",
+  "description": "Frontend Config",
+  "version": "2.10.1",
+  "license": "NO LICENSE",
+  "repository": {
+    "type": "http",
+    "url": "https://bitbucket.raiffeisen.ru/scm/fcc/atlant.git"
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "8.2.0",
+    "@commitlint/config-lerna-scopes": "8.2.0",
+    "@typescript-eslint/eslint-plugin": "2.5.0",
+    "@typescript-eslint/parser": "2.5.0",
+    "eslint-config-prettier": "6.4.0",
+    "eslint-plugin-jest": "22.20.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "2.2.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-csstree-validator": "1.6.1",
+    "stylelint-processor-styled-components": "1.8.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "eslint": "6.5.1",
+    "stylelint": "11.1.1",
+    "typescript": "3.7.2"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "eslint": "6.5.1",
+    "stylelint": "11.1.1",
+    "typescript": "3.7.2"
+  },
+  "gitHead": "7e8878cc6d7567cff98f0575c1031de48dcf6607"
+}

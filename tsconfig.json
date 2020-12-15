@@ -1,0 +1,92 @@
+{
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "esnext",
+    "target": "es6",
+    "jsx": "react",
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": false,
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "incremental": true,
+    "declarationDir": "./types",
+    "esModuleInterop": true,
+    "lib": [
+      "es2015.generator",
+      "dom"
+    ],
+    "paths": {
+      "config": [
+        "./config"
+      ],
+      "app": [
+        "./src"
+      ],
+      "api": [
+        "./src/api"
+      ],
+      "application": [
+        "./src/application"
+      ],
+      "assets/*": [
+        "./src/assets/*"
+      ],
+      "ext-apps": [
+        "./src/ext-apps"
+      ],
+      "components/*": [
+        "./src/components/*"
+      ],
+      "ui-components": [
+        "./src/components/ui-components"
+      ],
+      "constants/*": [
+        "./src/constants/*"
+      ],
+      "containers": [
+        "./src/containers"
+      ],
+      "methods": [
+        "./src/methods"
+      ],
+      "modal-documents": [
+        "./src/modal-documents"
+      ],
+      "services": [
+        "./src/services"
+      ],
+      "styles": [
+        "./src/assets/styles"
+      ],
+      "utils/*": [
+        "./src/utils/*"
+      ],
+      "utils": [
+        "./src/utils/index.js"
+      ],
+      "dal/*": [
+        "./src/dal/*"
+      ],
+      "root": [
+        "."
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*",
+    "./src/**/*.ts",
+    "./src/**/**/*.ts",
+    "./config/**/*",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

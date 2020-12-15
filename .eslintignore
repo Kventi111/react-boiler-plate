@@ -1,0 +1,7 @@
+node_modules
+dist
+flow-typed
+coverage
+.idea
+src/api/mock
+.history

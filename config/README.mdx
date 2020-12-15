@@ -1,0 +1,93 @@
+---
+name: Конфигурационные файлы
+menu: OpenSource
+route: /opensource/config
+---
+
+import { Release } from '@fcc/gatsby-theme-docz';
+import pkg from './package.json';
+
+# Конфигурационные файлы
+
+Пакет содержит конфигурационные файлы для статических анализаторов кода (`eslint`, `stylelint`, `commitlint`), компиляторов (`typescript`) и редакторов (`editors`).
+
+## Информация
+
+<Release of={pkg} />
+
+## Установка
+
+Библиотека поставляется отдельным пакетом `@fcc/config`. Пакет необходимо установить c помощью пакетного менеджера `npm`.
+
+```bash
+npm install @fcc/config --save-dev --registry=https://artifactory.raiffeisen.ru/artifactory/api/npm/fcc-d-npm/
+```
+
+## ESLint
+
+В файле `.eslintrc.js` в секции `extends` добавляете новые `presets`.
+
+```js
+module.exports = {
+    root: true,
+    extends: [
+        require.resolve('@fcc/config/eslint/eslint'),
+        require.resolve('@fcc/config/eslint/eslint-react'),
+        require.resolve('@fcc/config/eslint/eslint-jest'),
+        require.resolve('@fcc/config/eslint/eslint-prettier'),
+    ],
+};
+```
+
+## ESLint + Typescript
+
+В файле `.eslintrc.js` в секции `extends` добавляете новые `presets`.
+
+```js
+module.exports = {
+    root: true,
+    extends: [
+        require.resolve('@fcc/config/eslint/eslint'),
+        require.resolve('@fcc/config/eslint/eslint-react'),
+        require.resolve('@fcc/config/eslint/eslint-prettier'),
+        require.resolve('@fcc/config/eslint/eslint-typescript'),
+    ],
+    parserOptions: {
+        project: './tsconfig.json',
+    },
+};
+```
+
+## Typescript (tsconfig)
+
+В файле `tsconfig.json` в секции `extends` добавляете новые `presets`.
+
+```js
+{
+  "extends": "@fcc/config/typescript/tsconfig",
+  "typeRoots": ["./typings"],
+  "include": ["workspaces/**/*"],
+  "exclude": ["node_modules", "dist"],
+  "outDir": "./dist"
+}
+```
+
+## Prettier
+
+В файле `.prettierrc.js` добавляете новые `presets`.
+
+```js
+module.exports = {
+    ...require('@fcc/config/prettier/.prettierrc'),
+};
+```
+
+## CommitLint
+
+В файле `commitlint.config.js` добавляете новые `presets`.
+
+```js
+module.exports = {
+    extends: ['@fcc/config/commitlint'],
+};
+```
