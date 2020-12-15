@@ -52,7 +52,7 @@ module.exports = {
           "indent": ["error", 2]
         },
         extends: [
-          require.resolve('@fcc/config/eslint/eslint-jest')
+          require.resolve('./config/eslint/eslint-jest.js')
         ],
         rules: {
           'jest/valid-expect': [0],
@@ -64,8 +64,8 @@ module.exports = {
       {
         files: ['**/*.ts', '**/*.tsx'],
         extends: [
-          require.resolve('@fcc/config/eslint/eslint-typescript.js'),
-          require.resolve('@fcc/config/eslint/eslint-react'),
+          require.resolve('./config/eslint/eslint-typescript.js'),
+          require.resolve('./config/eslint/eslint-react'),
         ],
         rules: {
           "comma-dangle": ["error", "only-multiline"],
