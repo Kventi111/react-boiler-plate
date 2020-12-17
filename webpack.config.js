@@ -161,44 +161,44 @@ module.exports = function (env, argv) {
             },
           ]
         },
-        // {
-        //   test: /\.css$/i,
-        //   use: [
-        //     'style-loader',
-        //     {
-        //       loader: 'css-loader',
-        //       options: { importLoaders: 1 }
-        //     },
-        //     {
-        //       loader: 'postcss-loader',
-        //       options: {
-        //         ident: 'postcss',
-        //         plugins: (loader) => [
-        //           require('postcss-import')({
-        //             addModulesDirectories: [
-        //               'node_modules',
-        //               path.resolve(__dirname, 'src/assets/')
-        //             ]
-        //           }),
-        //           require('postcss-url')(),
-        //           require('postcss-cssnext')({
-        //             browsers: ['last 3 versions', '> 3%']
-        //           }),
-        //           require('postcss-color-function')(),
-        //           require('postcss-mixins')(),
-        //           require('postcss-assets')({
-        //             loadPaths: [
-        //               path.resolve(__dirname, 'src/assets/')
-        //             ]
-        //           }),
-        //           require('postcss-browser-reporter')(),
-        //           require('postcss-reporter')(),
-        //           require('postcss-nested')(),
-        //         ]
-        //       }
-        //     }
-        //   ]
-        // },
+        {
+          test: /\.css$/i,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: { importLoaders: 1 }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss',
+                plugins: (loader) => [
+                  require('postcss-import')({
+                    addModulesDirectories: [
+                      'node_modules',
+                      path.resolve(__dirname, 'src/assets/')
+                    ]
+                  }),
+                  require('postcss-url')(),
+                  require('postcss-cssnext')({
+                    browsers: ['last 3 versions', '> 3%']
+                  }),
+                  require('postcss-color-function')(),
+                  require('postcss-mixins')(),
+                  require('postcss-assets')({
+                    loadPaths: [
+                      path.resolve(__dirname, 'src/assets/')
+                    ]
+                  }),
+                  require('postcss-browser-reporter')(),
+                  require('postcss-reporter')(),
+                  require('postcss-nested')(),
+                ]
+              }
+            }
+          ]
+        },
         {
           test: /\.(png|ico|jpe?g|jpeg|gif|svg)$/i,
           use: [
