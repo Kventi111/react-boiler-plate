@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import AuthForm from './auth';
+
 function App() {
-  return <div>123</div>;
+  return <AuthForm />;
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));

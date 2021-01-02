@@ -200,7 +200,7 @@ module.exports = function (env, argv) {
           ]
         },
         {
-          test: /\.(png|ico|jpe?g|jpeg|gif|svg)$/i,
+          test: /\.(png|ico|jpe?g|jpeg|gif|svg|jpg)$/i,
           use: [
             {
               loader: 'file-loader',

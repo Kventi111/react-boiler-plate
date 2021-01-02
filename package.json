@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "webpack-dev-server --mode=development",
+    "start": "NODE_ENV=development webpack-dev-server",
     "build:dev": "NODE_ENV=development webpack --watch",
     "build:prod": "NODE_ENV=production webpack --progress",
     "dts": "tsc -p tsconfig.json",
@@ -19,7 +19,8 @@
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
