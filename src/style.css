@@ -2,8 +2,12 @@
   display: grid;
   grid-template-columns: min-content auto;
   grid-gap: 0.5em;
-  font-size: 16px;
+  font-size: 14px;
   color: #ff5352;
+}
+
+.radio__label {
+  color: #888d8e;
 }
 
 .checkbox__input input {

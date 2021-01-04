@@ -13,12 +13,12 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  font-family: Roboto;
+  font-family: sans-serif;
 `;
 
 export const FormWrapper = styled.div`
   width: 700px;
-  height: 500px;
+  height: 600px;
 
   display: flex;
   border-radius: 8px;
@@ -32,6 +32,7 @@ export const FormLeftCol = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 60px;
+  justify-content: center;
 `;
 
 export const FormHeader = styled.div`
@@ -41,11 +42,39 @@ export const FormHeader = styled.div`
   align-items: center;
 `;
 
+export const FormRightCol = styled.div`
+  width: 40%;
+  background: url(${background});
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
+
+export const FormContent = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const Title = styled.div`
   color: ${accentColor};
   font-size: 24px;
   font-weight: bold;
   padding: 60px 0 16px 0;
+`;
+
+export const SmallText = styled.div`
+  display: flex;
+  color: #888d8e;
+  font-size: 14px !important;
+  padding-bottom: 8px;
+  text-align: left;
+  margin: 0 0 48px 0;
+`;
+
+export const AccentText = styled.span`
+  color: ${accentColor};
+  margin: 0 4px;
+  font-size: inherit;
+  cursor: ${({ pseudoLink }) => (pseudoLink ? 'pointer' : 'default')};
 `;
 
 export const SocialItem = styled.div`
@@ -68,13 +97,6 @@ export const SocialList = styled.div`
   padding-bottom: 16px;
 `;
 
-export const FormRightCol = styled.div`
-  width: 40%;
-  background: url(${background});
-  background-size: cover;
-  background-repeat: no-repeat;
-`;
-
 export const Input = styled.input`
   background-color: #f7f8f9;
   border-radius: 4px;
@@ -82,29 +104,23 @@ export const Input = styled.input`
   border: 1px solid #ebeff2;
   font-size: 14px;
   margin: ${({ marginParams }) => marginParams && marginParams};
+  border: ${({ hasError }) => hasError && `1px solid red`};
 
   ::placeholder {
     color: #cbd4d7;
   }
 `;
 
-export const FormContent = styled.div`
+export const InpputWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin: ${({ marginParams }) => marginParams && marginParams};
 `;
 
-export const SmallText = styled.div`
-  display: flex;
-  color: #888d8e;
-  font-size: 14px;
-  padding-bottom: 8px;
-  text-align: left;
-  margin: 0 0 48px 0;
-`;
-
-export const AccentText = styled.span`
-  color: ${accentColor};
-  margin: 0 4px;
+export const InputError = styled.div`
+  font-size: 10px;
+  height: 8px;
+  color: #e62300;
 `;
 
 export const Button = styled.button`
@@ -117,10 +133,14 @@ export const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.5s;
-  outline: none;
 
   &:hover {
     background-color: #f33c3b;
+  }
+
+  &:disabled {
+    cursor: default;
+    background: grey;
   }
 `;
 
