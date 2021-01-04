@@ -84,18 +84,18 @@ export default function SignUp({ checkoutFormState }: SignUpProps) {
       <FormWrapper>
         <FormLeftCol>
           <FormHeader>
-            <Title> Сreate account </Title>
+            <Title> Регистрация </Title>
             <SocialList>
               <SocialItem imgPath={facebook} />
               <SocialItem imgPath={google} />
               <SocialItem imgPath={vk} />
               <SocialItem imgPath={twitter} />
             </SocialList>
-            <SmallText>or use your email for regestration</SmallText>
+            <SmallText>или используйте почту для регистрации</SmallText>
           </FormHeader>
           <FormContent>
             <InpputWrapper marginParams='0 0 16px 0'>
-              <Input hasError={formState.errors['name']} name='name' placeholder='Name' onChange={onFieldsChangeHandler} />
+              <Input hasError={formState.errors['name']} name='name' placeholder='Имя' onChange={onFieldsChangeHandler} />
               <InputError> {formState.errors['name']} </InputError>
             </InpputWrapper>
             <InpputWrapper marginParams='0 0 16px 0'>
@@ -103,7 +103,7 @@ export default function SignUp({ checkoutFormState }: SignUpProps) {
               <InputError> {formState.errors['email']} </InputError>
             </InpputWrapper>
             <InpputWrapper marginParams='0 0 16px 0'>
-              <Input hasError={formState.errors['password']} name='password' placeholder='Password' onChange={onFieldsChangeHandler} />
+              <Input hasError={formState.errors['password']} name='password' placeholder='Пароль' onChange={onFieldsChangeHandler} />
               <InputError> {formState.errors['password']} </InputError>
             </InpputWrapper>
           </FormContent>
@@ -131,18 +131,18 @@ export default function SignUp({ checkoutFormState }: SignUpProps) {
                 </span>
               </span>
               <span className='radio__label'>
-                I agree to the <AccentText> Terms </AccentText> and <AccentText> Privacy Policy. </AccentText>
+                Я согласен с <AccentText> Условиями </AccentText> и <AccentText> Политикой конфиденциальности. </AccentText>
               </span>
             </label>
           </SmallText>
           <Button marginParams='0 0 16px 0' onClick={onSignUp}>
-            Sign Up
+            Регистрация
           </Button>
 
           <SmallText>
-            You have account ?
+            У вас есть аккаунт ?
             <AccentText pseudoLink onClick={() => checkoutFormState(FormStateEnum.SignIN)}>
-              Sign IN
+              Войти
             </AccentText>
           </SmallText>
         </FormLeftCol>

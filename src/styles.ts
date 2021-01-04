@@ -67,7 +67,7 @@ export const SmallText = styled.div`
   font-size: 14px !important;
   padding-bottom: 8px;
   text-align: left;
-  margin: 0 0 48px 0;
+  margin: 0 0 34px 0;
 `;
 
 export const AccentText = styled.span`

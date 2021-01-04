@@ -78,7 +78,7 @@ export default function SignIn({ checkoutFormState }: SignInProps) {
       <FormWrapper>
         <FormLeftCol>
           <FormHeader>
-            <Title> Enter your account </Title>
+            <Title> Вход в аккаунт </Title>
           </FormHeader>
           <FormContent>
             <InpputWrapper marginParams='0 0 16px 0'>
@@ -86,18 +86,18 @@ export default function SignIn({ checkoutFormState }: SignInProps) {
               <InputError> {formState.errors['email']} </InputError>
             </InpputWrapper>
             <InpputWrapper marginParams='0 0 16px 0'>
-              <Input hasError={formState.errors['password']} name='password' placeholder='Password' onChange={onFieldsChangeHandler} />
+              <Input hasError={formState.errors['password']} name='password' placeholder='Пароль' onChange={onFieldsChangeHandler} />
               <InputError> {formState.errors['password']} </InputError>
             </InpputWrapper>
           </FormContent>
           <Button marginParams='0 0 16px 0' onClick={onSignIn}>
-            Sign In
+            Вход
           </Button>
 
           <SmallText>
-            You don`t have account ?
+            У вас нет аккунта ?
             <AccentText pseudoLink onClick={() => checkoutFormState(FormStateEnum.SignUP)}>
-              Sign UP
+              Регистрация
             </AccentText>
           </SmallText>
         </FormLeftCol>
